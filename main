@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class kdvHesaplamasi {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        double fiyat, kdvOrani, kdvTutari, kdvliTutar;
+
+        System.out.println("Urun fiyatini girin: ");
+        fiyat = scanner.nextInt();
+
+         kdvOrani = fiyat <= 1000 ? 18 : 8 ;
+
+         kdvTutari = (fiyat/100)*kdvOrani;
+
+         kdvliTutar = fiyat+ kdvTutari;
+
+        System.out.println("Urun kdv orani : %" +kdvOrani );
+        System.out.println("Urun kdv si : " +kdvTutari );
+        System.out.println("Urun kdvli fiyati:" + kdvliTutar);
+    }
+}
